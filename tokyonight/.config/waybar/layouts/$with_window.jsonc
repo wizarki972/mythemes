@@ -1,7 +1,7 @@
 {
     "layer" : "top",
     "position" : "top",
-    "width" : 1920,
+    "width" : ${SCREEN_WIDTH},
     "margin" : "5 0",
 
     "group/gleft1" : {
@@ -9,10 +9,6 @@
         "modules" : [
             "temperature", "cpu", "memory"
         ],
-        "drawer" : {
-            "transition-duration": 500,
-            "transition-left-to-right": true
-        }
     },
 
     "group/gleft2" : {
@@ -22,16 +18,16 @@
         ]
     },
 
-    "group/gright1" : {
-        "orientation": "horizontal",
-        "modules": [
-            "battery", "network"
-        ],
-        "drawer" : {
-            "transition-duration": 500,
-            "transition-left-to-right": true
-        }
-    },
+    // "group/gright1" : {
+    //     "orientation": "horizontal",
+    //     "modules": [
+    //         "battery", "network"
+    //     ],
+    //     "drawer" : {
+    //         "transition-duration": 500,
+    //         "transition-left-to-right": true
+    //     }
+    // },
 
     "group/gright2" : {
         "orientation": "horizontal",
@@ -43,13 +39,13 @@
     "group/gright3" : {
         "orientation": "horizontal",
         "modules" : [
-            "pulseaudio", "bluetooth"
+            "battery", "backlight", "pulseaudio", "bluetooth"
         ]
     },
 
     "modules-left"   : ["custom/start", "group/gleft1", "group/gleft2", "mpris"],
     "modules-center" : ["clock"],
-    "modules-right"  : [ "backlight", "group/gright3", "group/gright2", "group/gright1", "custom/ctlcenter"],
+    "modules-right"  : [ "group/gright3", "group/gright2", "custom/ctlcenter"],
 
     "include": [ "~/.config/waybar/modules.jsonc" ]
 }
