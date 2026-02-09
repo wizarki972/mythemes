@@ -1,210 +1,143 @@
-/*
-   ┏┓┏┓┓ ┏┓┏┳┓┏┓┳┓
-   ┗┓┣ ┃ ┣  ┃ ┃┃┣┫
-   ┗┛┗┛┗┛┗┛ ┻ ┗┛┛┗
-*/
+configuration {
+    modi:                        "drun";
+    font:                        "Google Sans Flex Regular 11";
+    show-icons:                  true;
+    drun-display-format:         "{name}";
+    hover-select:                true;
+    me-select-entry:             "MouseSecondary";
+    me-accept-entry:             "MousePrimary";
+    window-format:               "{w} · {c} · {t}";
+    dpi:                         1;
+}
 
 * {
-/* =========================
-   Core accents
-   ========================= */
-primary:                    #7aa2f7;   /* Tokyo Night blue */
-primary-fixed:              #c0caf5;
-primary-fixed-dim:          #7aa2f7;
-on-primary:                 #1a1b26;
-on-primary-fixed:           #16161e;
-on-primary-fixed-variant:   #394b70;
-
-primary-container:          #394b70;
-on-primary-container:       #c0caf5;
-
-/* =========================
-   Secondary (cool cyan)
-   ========================= */
-secondary:                  #7dcfff;
-secondary-fixed:            #b4f9f8;
-secondary-fixed-dim:        #7dcfff;
-on-secondary:               #0b1c2d;
-on-secondary-fixed:         #081423;
-on-secondary-fixed-variant: #2e5f78;
-
-secondary-container:        #2e5f78;
-on-secondary-container:     #b4f9f8;
-
-/* =========================
-   Tertiary (warm but muted)
-   ========================= */
-tertiary:                   #e0af68;
-tertiary-fixed:             #f7c67f;
-tertiary-fixed-dim:         #e0af68;
-on-tertiary:                #2a1e0e;
-on-tertiary-fixed:          #1c1408;
-on-tertiary-fixed-variant:  #5a4a2c;
-
-tertiary-container:         #5a4a2c;
-on-tertiary-container:      #f7c67f;
-
-/* =========================
-   Error (Tokyo Night red)
-   ========================= */
-error:                      #f7768e;
-on-error:                   #2a0f14;
-error-container:            #5a1d2a;
-on-error-container:         #ffd6dd;
-
-/* =========================
-   Surfaces (very important)
-   ========================= */
-/* surface:                    #1a1b26; */
-surface:                    #08080b;
-on-surface:                 #c0caf5;
-on-surface-variant:         #9aa5ce;
-
-surface-dim:                #16161e;
-surface-bright:             #2f334d;
-
-surface-container-lowest:   #13131a;
-surface-container-low:      #191922;
-surface-container:          #1f1f2b;
-surface-container-high:     #292e42;
-surface-container-highest:  #343a55;
-
-/* =========================
-   Structural colors
-   ========================= */
-outline:                    #565f89;
-outline-variant:            #3b4261;
-shadow:                     #000000;
-scrim:                      #000000;
-
-/* =========================
-   Inverse
-   ========================= */
-inverse-surface:            #c0caf5;
-inverse-on-surface:         #1a1b26;
-inverse-primary:            #394b70;
-
-/* =========================
-   UI aliases
-   ========================= */
-bg0:    @surface;
-bg1:    @surface-dim;
-bg2:    #3b426180;   /* translucent TN blue */
-bg3:    @primary-fixed-dim;
-
-fg0:    @on-surface;
-fg1:    #ffffff;
-fg2:    @primary;
-fg3:    #565f89;
-
-accent: #3b426180;
-
-background-color: @bg0;
-text-color:       @fg0;
-
-
-
-  /* bg0: @surface;
-  bg1: @surface-dim;
-  bg2: #3d3d3d80;
-  bg3: @primary-fixed-dim;
-  fg0: @on-surface;
-  fg1: #ffffff;
-  fg2: @primary;
-  fg3: #3d3d3d;
-  accent: #3d3d3d80;
-  background-color: @bg0;
-  text-color: @fg0; */
+    background-alt:              rgba(51, 51, 51, 0.5);
+    selected:                    rgba(255,255,255,0.16);
+    active:                      rgba(255,255,255,0.10);
+    urgent:                      rgba(255,80,80,0.28);
+    text-color:                  #fff;
+    text-selected:               rgba(255,255,255,0.98);
+    border-color:                rgba(0,0,0,0.35);
 }
 
-/*--------------------window----------------------------------------------*/
+/* ───────── Window ───────── */
+
 window {
-  location: center;
-  anchor: center;
+    enabled:                     true;
+    fullscreen:                  false;
+    transparency:                "real";
+    cursor:                      "default";
 
-  width: 70%;
-  height: 320px;
+    location:                    center;
+    anchor:                      center;
+    width:                       75%;
 
-  border-radius: 18px;
-  background-color: @bg0;
+    spacing:                     0px;
+    border:                      1px;
+    border-radius:               20px;
+
+    /* IMPORTANT FOR BLUR */
+    background-color:            rgba(46, 45, 45, 0.5);
+    border-color:                rgba(255, 255, 255, 0.45);
 }
 
-/*--------------------mainbox---------------------------------------------*/
+/* ───────── Layout ───────── */
+
 mainbox {
-  padding: 10px;
-  background-color: transparent;
+    enabled:                     true;
+    children:                    [ "inputbar", "listview" ];
+    background-color:            transparent;
 }
 
-/*--------------------inputbar--------------------------------------------*/
+/* ───────── Input ───────── */
+
 inputbar {
-  background-color: @surface;
-  border-color: @bg3;
+    enabled:                     true;
+    padding:                     5px;
+    margin:                      10px;
 
-  border: 2px;
-  border-radius: 16px;
+    text-color:                  rgba(255,255,255,0.55);
+    background-color:            transparent;
 
-  padding: 8px 16px;
-  spacing: 8px;
-  children: [ entry];
+    children:                    [ "entry" ];
 }
+
 entry {
-  placeholder: "Select wallpaper";
-  placeholder-color: @fg3;
+    enabled:                     true;
+    text-color:                  inherit;
+    background-color:            transparent;
 }
 
-/*--------------------listview / grid-------------------------------------*/
+/* ───────── Grid ───────── */
+
 listview {
-  columns: 5;
-  lines: 1;
-  flow: horizontal;
+    enabled:                     true;
+    columns:                     5;
+    lines:                       1;
 
-  fixed-height: true;
-  height: 220px;
+    padding:                     26px 36px;
+    spacing:                     20px;
 
-  spacing: 16px;
-  padding: 6px;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
 
-  background-color: transparent;
+    layout:                      vertical;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    background-color:            transparent;
+    border:                      0px;
 }
 
-/*--------------------element (border container)--------------------------*/
+/* ───────── Tiles ───────── */
+
 element {
-  orientation: vertical;
-  spacing: 6px;
+    enabled:                     true;
+    orientation:                 vertical;
+    expand:                      false;
 
-  padding: 3px;
-  border-radius: 14px;
-
-  background-color: transparent;
+    padding:                     5px 10px;
+    border-radius:               10px;
+    cursor:                      pointer;
+    text-color:                  #fff;
+    background-color:            rgba(255,255,255,0.04);
 }
 
-/*--------------------element-icon-----------------------------------------*/
+element normal.normal {
+    background-color:            rgba(255,255,255,0.06);
+        text-color:                  #fff;
+}
+
+element normal.active {
+    background-color:            rgba(255,255,255,0.10);
+        text-color:                  #fff;
+}
+
+element normal.urgent {
+    background-color:            rgba(255,60,60,0.25);
+        text-color:                  #fff;
+}
+
+element selected.normal {
+    background-color:            rgba(255,255,255,0.18);
+    text-color:                  #fff;
+}
+
+element alternate.normal {
+    background-color:            rgba(255,255,255,0.05);
+        text-color:                  #fff;
+}
+
+/* ───────── Icon & Text ───────── */
+
 element-icon {
-  size: 160px;
-  border-radius: 10px;
-  background-color: transparent;
+    size:                        50%;
+    padding:                     0px;
+    background-color:            transparent;
 }
 
-/*--------------------selected element (soft transparent border)----------*/
-element selected {
-  background-color: @accent;
-}
-
-/*--------------------text------------------------------------------------*/
 element-text {
-  padding: 2px 0px;
-  horizontal-align: 0.5;
-
-  background-color: transparent;
-  text-color: @fg1;
-}
-
-element selected element-text {
-  background-color: transparent;
-  text-color: @fg0;
-}
-
-/*--------------------scrollbar-------------------------------------------*/
-scrollbar {
-  handle-width: 0px;
+    padding-left:                10px;
+    background-color:            transparent;
 }
