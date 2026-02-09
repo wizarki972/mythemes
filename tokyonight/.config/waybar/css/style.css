@@ -64,7 +64,7 @@ tooltip label {
 } 
 
 #custom-start, #custom-logout, #gright1, #gleft1,
-#gright2, #gleft2, #gright3, #custom-ctlcenter, #power-profiles-daemon,  #mpris, #backlight {
+#gright2, #gleft2, #gright3, #custom-ctlcenter, #power-profiles-daemon,  #mpris {
     padding: 2px 9px;
     border-radius: 15px;
     background: @module-bg;

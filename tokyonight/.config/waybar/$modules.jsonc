@@ -165,7 +165,7 @@
 
     "custom/start": {
         "format": "",
-        "on-click": "bash -c ~/.config/rofi/bin/drun"
+        "on-click": "vicinae toggle"
     },
 
     "custom/ctlcenter" : {
