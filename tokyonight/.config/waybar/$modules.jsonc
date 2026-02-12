@@ -68,8 +68,7 @@
     "pulseaudio": {
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon}  {volume}%",
-//        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-	    "on-click": "kitty --title change-sink -e ${SCRIPTS_DIR_PATH}/audio-output-switch.sh",
+        "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "kitty --title wiremix -e wiremix",
         "scroll-step": 2,
         "tooltip": false,
