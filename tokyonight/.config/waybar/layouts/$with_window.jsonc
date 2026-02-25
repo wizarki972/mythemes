@@ -39,7 +39,7 @@
     "group/gright3" : {
         "orientation": "horizontal",
         "modules" : [
-            "battery", "backlight", "pulseaudio", "bluetooth"
+            "battery", "backlight", "wireplumber", "wireplumber#source", "bluetooth"
         ]
     },
 

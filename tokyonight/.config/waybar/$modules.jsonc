@@ -65,6 +65,33 @@
         "format-icons": ["","","","","","","","","","","","","","",""]
     },
 
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁",
+        "format-source": "{volume}% ",
+        "format-source-muted": " ",
+        "format-icons": {
+            "default": ["", ""],
+            "headphone": "",
+            "headset": "",
+            "headphone-muted": "󰟎",
+            "headset-muted": "󰟎",
+            "default-muted": "󰖁"
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "kitty --title wiremix -e wiremix",
+        "tooltip": false,
+        "scroll-step": 2
+    },
+
+    "wireplumber#source": {
+        "node-type": "Audio/Source",
+        "format": "󰍬 {volume}%",
+        "format-muted": "󰍭",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "scroll-step": 5
+    },
+
     "pulseaudio": {
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon}  {volume}%",
@@ -109,8 +136,7 @@
         "tooltip-format": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t {device_battery_percentage}%",
-        // "on-click": "~/.local/bin/toggle_bluetooth &",
-        "on-click-right": "hyprctl dispatch exec blueman-manager"
+        "on-click": "hyprctl dispatch exec blueman-manager"
     },
 
     "battery": {
