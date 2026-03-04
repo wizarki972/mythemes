@@ -1,3 +1,4 @@
-$main_color      = rgba(226, 95, 62, 1)
+$border_color = rgb(e25f3e)
+$main_color      = rgba(226, 95, 62, 1.0)
 $secondary_color = rgba(226, 95, 62, 0.5)
 $primary_color   = rgba(123,108, 91, 0.8)

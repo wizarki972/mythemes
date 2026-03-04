@@ -1,7 +1,4 @@
-# Use terminal (kitty) colors
-palette = "terminal"
-
-add_newline = true
+add_newline = false
 
 format = """
 $directory\
