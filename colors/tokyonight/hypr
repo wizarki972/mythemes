@@ -1,4 +1,4 @@
 $border_color = rgb(#f0b4df)
-$main_color = rgba(240, 180, 223, 1)
+$main_color = rgba(240, 180, 223, 1.0)
 $secondary_color = rgba(240, 180, 223, 0.5)
 $primary_color = rgba(210, 195, 246, 0.8)
