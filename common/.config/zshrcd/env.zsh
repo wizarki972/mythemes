@@ -19,3 +19,6 @@ export CUDA_CACHE_PATH="$XDG_CACHE_HOME/cuda"
 # ---------- WORD BOUNDARIES ----------
 # Make path navigation sane (/ stops words)
 WORDCHARS=${WORDCHARS//\/}
+
+# ---------- CUSTOM ----------
+export ZSH_HISTORY=$HOME/.local/state/zsh/.zsh_history
