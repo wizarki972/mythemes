@@ -1,0 +1,5 @@
+hypr=.config/hypr/colors.conf
+kitty=.config/kitty/colors.conf
+rofi=.config/rofi/colors.rasi
+swaync=.config/swaync/colors.css
+waybar=.config/waybar/colors.css

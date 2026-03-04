@@ -1,0 +1,3 @@
+$main_color      = rgba(100, 144, 148, 1)   # selected
+$secondary_color = rgba(100, 144, 148, 0.5)   # selected (soft)
+$primary_color   = rgba(233, 204, 157, 0.8)   # active

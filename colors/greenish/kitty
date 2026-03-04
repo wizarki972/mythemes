@@ -1,0 +1,43 @@
+# --- Primary colors ---
+background #131d1f
+foreground #ffffff
+
+# --- Cursor ---
+cursor #ffffff
+cursor_text_color #131d1f
+
+# --- Selection ---
+selection_background #183a43
+selection_foreground #ffffff
+
+# --- Normal colors ---
+color0  #1b2a2d      # dark bg variant
+color1  #fea861      # urgent
+color2  #649094      # selected
+color3  #e9cc9d      # active
+color4  #5fa3ad      # derived accent
+color5  #8fbfc6      # derived accent
+color6  #7bb6bd      # derived accent
+color7  #ffffff      # foreground
+
+# --- Bright colors ---
+color8  #24373b
+color9  #ffb982
+color10 #7aaeb2
+color11 #f1dab5
+color12 #74b7c1
+color13 #a6d4d9
+color14 #92cdd3
+color15 #ffffff
+
+# --- UI Tweaks ---
+active_tab_foreground   #ffffff
+active_tab_background   #183a43
+inactive_tab_foreground #649094
+inactive_tab_background #131d1f
+
+border_color #183a43
+inactive_border_color #131d1f
+
+# --- Marks / URL ---
+url_color #649094

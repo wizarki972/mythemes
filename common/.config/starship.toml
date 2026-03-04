@@ -1,0 +1,44 @@
+# Use terminal (kitty) colors
+palette = "terminal"
+
+add_newline = true
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$character
+"""
+
+# ---------- DIRECTORY ----------
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold"
+
+# ---------- GIT ----------
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style)"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style)"
+
+# ---------- PROMPT ----------
+[character]
+success_symbol = "❯"
+error_symbol = "❯"
+
+# ---------- MISC ----------
+[cmd_duration]
+min_time = 500
+format = " [$duration]"
+
+[package]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[rust]
+disabled = true

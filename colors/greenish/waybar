@@ -1,0 +1,13 @@
+/* Adapted from Rofi colors */
+
+@define-color module-bg rgba(19, 29, 31, 0.9);
+@define-color tooltip-bg rgba(19, 29, 31, 1);
+
+@define-color fg #FFFFFF;
+@define-color workspace-fg @fg;
+
+@define-color inactive #649094;
+@define-color red #FEA861;
+@define-color blue #649094;
+@define-color yellow #E9CC9D;
+@define-color green #183A43;
