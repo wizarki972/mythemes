@@ -24,12 +24,12 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    center;
+    location:                    south;
     anchor:                      center;
     fullscreen:                  false;
     width:                       800px;
     x-offset:                    0px;
-    y-offset:                    0px;
+    y-offset:                    -1em;
 
     /* properties for all widgets */
     enabled:                     true;
