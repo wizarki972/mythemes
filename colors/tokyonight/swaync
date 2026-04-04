@@ -4,4 +4,4 @@
 @define-color background-alt  #0e0e14;
 @define-color selected        alpha(@text-alt, .4);
 @define-color hover           alpha(@selected, .4);
-@define-color urgent          @text-alt;
+@define-color urgent          #E06B74FF;
