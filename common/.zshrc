@@ -1,3 +1,6 @@
+# ---------- INTERACTIVE SESSION CHECK ----------
+[[ $- != *i* ]] && return
+
 # ---------- CORE OPTIONS ----------
 setopt autocd prompt_subst
 setopt appendhistory sharehistory
