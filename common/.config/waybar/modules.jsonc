@@ -190,7 +190,7 @@
 
     "custom/start": {
         "format": "",
-        "on-click": "vicinae toggle"
+        "on-click": "~/.config/rofi/bin/launcher"
     },
 
     "custom/swaync" : {
