@@ -8,14 +8,19 @@ setopt hist_ignore_dups hist_ignore_space
 setopt hist_reduce_blanks inc_append_history
 setopt extended_history
 
-HISTFILE="$HOME/.local/state/zsh/.zsh_history"
-HISTSIZE=1000
-SAVEHIST=1000
-
 # ---------- LOAD SPLIT FILES ----------
 source "$HOME/.config/zshrcd/env.zsh"
 source "$HOME/.config/zshrcd/aliases.zsh"
 source "$HOME/.config/zshrcd/binds.zsh"
+
+# ---------- HISTORY FILE ----------
+HISTFILE="${ZSH_HISTORY:-$HOME/.zsh_history}"
+if [[ ! -f "$HISTFILE" ]]; then
+    mkdir -p "$(dirname "$HISTFILE")"
+    touch "$HISTFILE"
+fi
+HISTSIZE=1000
+SAVEHIST=1000
 
 # ---------- COMPLETION ----------
 autoload -Uz compinit
