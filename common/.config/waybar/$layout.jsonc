@@ -1,7 +1,6 @@
 {
     "layer" : "top",
     "position" : "top",
-    "width" : ${SCREEN_WIDTH},
     "margin" : "5 0",
 
     "group/gleft1" : {
