@@ -30,3 +30,5 @@ wlogout
 playerctl
 ttf-jetbrains-mono-nerd
 ttf-cascadia-code-nerd
+fastfetch
+htop
