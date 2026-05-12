@@ -1,14 +1,14 @@
-hl.env("PATH", "$PATH:"+SCRIPTS_DIR_PATH)
+hl.env("PATH", "$PATH:" .. SCRIPTS_DIR_PATH)
 
 -- XDG VARIABLES
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
-hl.env("XDG_STATE_HOME", "$HOME/.local/state")
-hl.env("XDG_SRC_HOME", "$HOME/.local/src")
-hl.env("XDG_DATA_HOME", "$HOME/.local/share")
-hl.env("XDG_CONFIG_HOME", "$HOME/.config")
-hl.env("XDG_CACHE_HOME", "$HOME/.cache")
+hl.env("XDG_STATE_HOME", "/home/saran/.local/state")
+hl.env("XDG_SRC_HOME", "/home/saran/.local/src")
+hl.env("XDG_DATA_HOME", "/home/saran/.local/share")
+hl.env("XDG_CONFIG_HOME", "/home/saran/.config")
+hl.env("XDG_CACHE_HOME", "/home/saran/.cache")
 
 
 -- Toolkit Backends
