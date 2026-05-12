@@ -1,0 +1,4 @@
+BORDER_COLOR = "rgb(f0b4df)"
+MAIN_COLOR = "rgba(240, 180, 223, 1.0)"
+SECONDARY_COLOR = "rgba(240, 180, 223, 0.5)"
+PRIMARY_COLOR = "rgba(210, 195, 246, 0.8)"
