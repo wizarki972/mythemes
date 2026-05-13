@@ -1,4 +1,5 @@
-SCRIPTS_DIR_PATH = "/home/saran/.local/share/myone/scripts"
+HOME = os.getenv("HOME")
+SCRIPTS_DIR_PATH = HOME .. "/.local/share/myone/scripts"
 
 -- initial requirements
 -- configure monitors in monitors.lua
@@ -13,7 +14,7 @@ hl.config({
 
         border_size = 2,
         col = {
-            active_border_color = BORDER_COLOR,
+            active_border = BORDER_COLOR,
         },
 
         layout = "scrolling",
@@ -84,8 +85,8 @@ hl.config({
 
     scrolling = {
         focus_fit_method = 1,
-        follow_min_visible = 0.05,
-        column_width = 0.95,
+        follow_focus = true,
+        column_width = 1.0,
     },
 
     debug = {
@@ -122,7 +123,7 @@ hl.config({
 })
 
 -- SOURCES
-require("sources.environment")
+require("sources.env")
 require("sources.execs")
 require("sources.animations")
 require("sources.keybindings")

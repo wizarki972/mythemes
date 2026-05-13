@@ -13,27 +13,27 @@ hl.curve("snap", {type="bezier", points={{0.05, 0.9}, {0.1, 1.05}}})
 
 -- LEAFS
 -- windows
-hl.animation({ leaf="windowsIn", enabled=true, speed=3, curve="emphasizedDecel", style="popin 80%"})
-hl.animation({ leaf="fadeIn", enabled=true, speed=3, curve="emphasizedDecel"})
-hl.animation({ leaf="windowsOut", enabled=true, speed=2, curve="emphasizedDecel", style="popin 90%"})
-hl.animation({ leaf="fadeOut", enabled=true, speed=2, curve="emphasizedDecel"})
-hl.animation({ leaf="windowsMove", enabled=true, speed=3, curve="emphasizedDecel", style="slide"})
-hl.animation({ leaf="border", enabled=true, speed=10, curve="emphasizedDecel"})
+hl.animation({ leaf="windowsIn", enabled=true, speed=3, bezier="emphasizedDecel", style="popin 80%"})
+hl.animation({ leaf="fadeIn", enabled=true, speed=3, bezier="emphasizedDecel"})
+hl.animation({ leaf="windowsOut", enabled=true, speed=2, bezier="emphasizedDecel", style="popin 90%"})
+hl.animation({ leaf="fadeOut", enabled=true, speed=2, bezier="emphasizedDecel"})
+hl.animation({ leaf="windowsMove", enabled=true, speed=3, bezier="emphasizedDecel", style="slide"})
+hl.animation({ leaf="border", enabled=true, speed=10, bezier="emphasizedDecel"})
 
 -- layers
-hl.animation({ leaf="layersIn", enabled=true, speed=2.7, curve="emphasizedDecel", style="popin 98%"})
-hl.animation({ leaf="layersOut", enabled=true, speed=2.4, curve="menu_accel", style="popin 98%"})
+hl.animation({ leaf="layersIn", enabled=true, speed=2.7, bezier="emphasizedDecel", style="popin 98%"})
+hl.animation({ leaf="layersOut", enabled=true, speed=2.4, bezier="menu_accel", style="popin 98%"})
 
 -- fade
-hl.animation({ leaf="fadeLayersIn", enabled=true, speed=0.5, curve="menu_decel"})
-hl.animation({ leaf="fadeLayersOut", enabled=true, speed=2.7, curve="stall"})
+hl.animation({ leaf="fadeLayersIn", enabled=true, speed=0.5, bezier="menu_decel"})
+hl.animation({ leaf="fadeLayersOut", enabled=true, speed=2.7, bezier="stall"})
 
 -- workspaces
-hl.animation({ leaf="workspaces", enabled=true, speed=7, curve="menu_decel"})
+hl.animation({ leaf="workspaces", enabled=true, speed=7, bezier="menu_decel", style="slidevert"})
 
 -- specialWorkspace
-hl.animation({ leaf="specialWorkspaceIn", enabled=true, speed=2.8, curve="emphasizedDecel", style="slide"})
-hl.animation({ leaf="specialWorkspaceOut", enabled=true, speed=1.2, curve="emphasizedAccel", style="slide"})
+hl.animation({ leaf="specialWorkspaceIn", enabled=true, speed=2.8, bezier="emphasizedDecel", style="slide"})
+hl.animation({ leaf="specialWorkspaceOut", enabled=true, speed=1.2, bezier="emphasizedAccel", style="slide"})
 
 -- zoom
-hl.animation({ leaf="zoomFactor", enabled=true, speed=3, curve="emphasizedDecel"})
+hl.animation({ leaf="zoomFactor", enabled=true, speed=3, bezier="emphasizedDecel"})
