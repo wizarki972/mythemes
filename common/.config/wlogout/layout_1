@@ -21,7 +21,7 @@
 
 {
     "label" : "shutdown",
-    "action" : "wizi-system-hutdown.sh",
+    "action" : "wizi-system-shutdown.sh",
     "text" : "Shutdown",
     "keybind" : "s"
 }
