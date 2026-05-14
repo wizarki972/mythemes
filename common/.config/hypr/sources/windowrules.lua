@@ -76,7 +76,7 @@ hl.window_rule({ float=true, match= {class = "^(qt6ct)$"}})
 hl.window_rule({ float=true, match= {class = "^(org.kde.ark)$"}})
 
 -- polkit
-hl.window_rule({ float=true, match={class = "^(polkit-gnome-authentication-agent-1.)$"}})
+hl.window_rule({ float=true, pin=true, center=true, match={class = "polkit-gnome-authentication-agent-1"}})
 -- others
 hl.window_rule({ float=true, center=true, match={title = "^(top)$"}})
 hl.window_rule({ float=true, center=true, match={title = "^(btop)$"}})
