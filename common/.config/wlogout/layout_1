@@ -7,7 +7,7 @@
 
 {
     "label" : "logout",
-    "action" : "hyprctl dispatch exit 0",
+    "action" : "wizi-system-logout.sh",
     "text" : "Logout",
     "keybind" : "e"
 }
@@ -21,7 +21,7 @@
 
 {
     "label" : "shutdown",
-    "action" : "systemctl poweroff",
+    "action" : "wizi-system-hutdown.sh",
     "text" : "Shutdown",
     "keybind" : "s"
 }
@@ -35,7 +35,7 @@
 
 {
     "label" : "reboot",
-    "action" : "systemctl reboot",
+    "action" : "wizi-system-reboot.sh",
     "text" : "Reboot",
     "keybind" : "r"
 }
