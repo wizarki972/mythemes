@@ -11,7 +11,7 @@ hl.bind(mainMod .. " + ALT + C", function ()
 end)
 
 -- windows/session actions
-hl.bind(mainMod .. " + Q", hl.dsp.window.kill())
+hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind("ALT + F4", hl.dsp.window.kill())
 hl.bind(mainMod .. " + Delete", hl.dsp.exec_cmd("loginctl terminate-user"))
 hl.bind(mainMod .. " + W", hl.dsp.window.float({action = "toggle"}))
@@ -109,7 +109,7 @@ hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl  set-volume @DEFAULT_SINK
 
 -- Brightness control
 hl.bind("XF86MonBrightnessup", hl.dsp.exec_cmd("myone --bright +5%"), { locked=true, repeating=true })
-hl.bind("XF86MonBrightnessdown", hl.dsp.exec_cmd("myone --bright -5%"), { locked=true, repeating=true })
+hl.bind("XF86MonBrightnessdown", hl.dsp.exec_cmd("myone --bright 5%-"), { locked=true, repeating=true })
 
 -- Media control
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked=true })
