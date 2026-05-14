@@ -108,7 +108,7 @@ hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl  set-volume @DEFAULT_SINK
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl  set-volume @DEFAULT_SINK@ 5%+ -l 1.0 && myone --volume-osd sink "), { locked=true, repeating=true })
 
 -- Brightness control
-hl.bind("XF86MonBrightnessup", hl.dsp.exec_cmd("myone --bright +5%"), { locked=true, repeating=true })
+hl.bind("XF86MonBrightnessup", hl.dsp.exec_cmd("myone --bright 5%+"), { locked=true, repeating=true })
 hl.bind("XF86MonBrightnessdown", hl.dsp.exec_cmd("myone --bright 5%-"), { locked=true, repeating=true })
 
 -- Media control
