@@ -37,7 +37,7 @@ hl.window_rule({ opacity = "0.80 0.80", match = {class = "^(com.obsproject.Studi
 hl.window_rule({ opacity = "0.80 0.80", match = {class = "^(gnome-boxes)$"}}) --  # Obs-
 hl.window_rule({ opacity = "0.80 0.80", match = {class = "^(discord)$"}}) --  Discord-Electr
 hl.window_rule({ opacity = "0.80 0.80", match = {class = "^(WebCord)$"}}) -- WebCord-Electr
-hl.window_rule({ opacity = "0.80 0.80", match = {class = "^(ArmCord)$)$"}}) -- WebCord-Electr
+hl.window_rule({ opacity = "0.80 0.80", match = {class = "^(ArmCord)$"}}) -- WebCord-Electr
 hl.window_rule({ opacity = "0.80 0.80", match = {class = "^(app.drey.Warp)$"}}) -- Warp-G
 hl.window_rule({ opacity = "0.80 0.80", match = {class = "^(net.davidotek.pupgui2)$"}}) -- ProtonUp-
 hl.window_rule({ opacity = "0.80 0.80", match = {class = "^(yad)$"}}) -- Protontricks-G
@@ -91,7 +91,7 @@ hl.window_rule({ float=true, center=true, match={class = "^(eog)$"}}) -- Imagevi
 hl.window_rule({ float=true, match={title = "^(Keyring properties)$"}}) -- Gnome keyring properties window
 
 -- my unique windowrules
-hl.window_rule({ float=true, size = {600, 350}, center=true, match={title = ".*change-sink.*"}})
+hl.window_rule({ float=true, size = {600, 350}, center=true, match={title = "^(change-sink)$"}})
 hl.window_rule({ float=true, size = {"(monitor_w*0.4)", ("monitor_h*0.4")}, center=true, match={title = "^(wiremix)$"}}) -- wiremix
 hl.window_rule({ float=true, size = {"(monitor_w*0.2)", ("monitor_h*0.3")}, center=true, match={class = "^(blueman-manager)$"}}) -- bluetooth manager
 hl.window_rule({ float=true, size = {"(monitor_w*0.4)", ("monitor_h*0.5")}, center=true, match={title = "^(nwg-displays)$"}}) -- multi monitor control/setting app
