@@ -1,8 +1,8 @@
 {
     "hyprland/workspaces": {
         "format": "{icon}",
-        "on-scroll-down": "hyprctl dispatch workspace e+1",
-        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace=\"e+1\" })'",
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace=\"e-1\" })'",
         "persistent-workspaces": { "*": 2 },
         "cursor" : true,
         "format-icons": {
@@ -115,15 +115,7 @@
         "format-disabled": "",
         "format-wifi": "  {essid} ({signalStrength} )",
         "format-ethernet": "󱓞 Wired connection",
-        "format-disconnected": "",
-        "menu": "on-click-right",
-        "menu-file": "~/.config/waybar/context/network.xml",
-        "menu-actions": {
-  			"action-1": "nmcli radio wifi off",
-  			"action-2": "nmcli radio wifi on",
-            "action-3": "hyprctl dispatch exec '[float] kitty -e nmtui'",
-            "action-4": "hyprctl dispatch exec nm-connection-editor"
-  		}
+        "format-disconnected": ""
     },
 
     "bluetooth": {
@@ -136,7 +128,7 @@
         "tooltip-format": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t {device_battery_percentage}%",
-        "on-click": "hyprctl dispatch exec blueman-manager"
+        "on-click": "hyprctl dispatch 'hl.dsp.exec_cmd(\"blueman-manager\")'"
     },
 
     "battery": {
@@ -157,7 +149,6 @@
     "clock": {
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%H:%M %d %B %Y}",
-        "on-click-right": "hyprctl dispatch exec 'alacritty --class=peaclock -e peaclock'",
         "calendar": {
             "mode": "month",
             "format": {
