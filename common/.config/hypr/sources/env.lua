@@ -1,4 +1,4 @@
--- hl.env("PATH", os.getenv("PATH") .. ":" .. SCRIPTS_DIR_PATH)
+hl.env("PATH", os.getenv("PATH") .. ":" .. SCRIPTS_DIR_PATH)
 
 -- XDG VARIABLES
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
