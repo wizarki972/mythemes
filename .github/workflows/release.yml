@@ -1,0 +1,34 @@
+name: Release Asset
+
+on:
+  push:
+    tags:
+      - 'v*' # Triggers on tags starting with v (e.g., v1.0.0)
+
+permissions:
+  contents: write # Crucial permission allowing the action to create releases
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create Flat Zip Archive
+        run: |
+          # The trick: 'zip -r' runs *inside* the current directory.
+          # Using '.' preserves the internal folder structure without a root wrapper folder.
+          zip -r flat-archive.zip . -x "*.git*" ".github*" "Makefile" "zips" ".gitignore" ".vscode" ".luarc.json"
+          
+          # Optional: -x flags above prevent internal configuration bloat 
+          # from leaking into your clean asset.
+
+      - name: Create GitHub Release and Upload Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: flat-archive.zip
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
