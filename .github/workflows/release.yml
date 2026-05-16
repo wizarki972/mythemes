@@ -36,7 +36,7 @@ jobs:
 
       - name: Create Flat Zip Archive
         run: |
-          zip -r flat-archive.zip . -x "*.git*" ".github*" "Makefile"
+          zip -r flat-archive.zip . -x "*.git*" ".github*" "Makefile" ".vscode" ".luarc.json" ".gitignore" "zips/*"
 
       # Uploads the asset. If the release already exists, it adds to it.
       - name: Update GitHub Release
