@@ -1,4 +1,4 @@
-hypr=.config/hypr/colors.conf
+hypr.lua=.config/hypr/colors.lua
 kitty=.config/kitty/colors.conf
 rofi=.config/rofi/colors.rasi
 swaync=.config/swaync/colors.css
